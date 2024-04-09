@@ -22,3 +22,7 @@ class Entry(models.Model):
     def __str__(self):
         """Retorna uma string simples representando a entrada"""
         return f"{self.text[:50]}..."    
+    
+
+
+    
