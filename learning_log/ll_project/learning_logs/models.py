@@ -9,3 +9,16 @@ class Topic(models.Model):
     def __str__(self) -> str:
         """Retorna uma apresentação de string do modelo"""
         return self.text
+    
+class Entry(models.Model):
+    """Algo especifico aprendido sobre um topico"""
+    topic = models.ForeignKey(Topic, on_delete=models.Cascade)
+    text = models.TextField()
+    date_added = models.DurationField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'entries'
+
+    def __str__(self):
+        """Retorna uma string simples representando a entrada"""
+        return f"{self.text[:50]}..."    
