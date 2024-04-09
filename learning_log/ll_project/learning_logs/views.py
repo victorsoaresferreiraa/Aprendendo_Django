@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def index(request):
     """A pagina inicial para o registro de Aprendizagem"""
-    return render(request, 'learning_logs\index.html')
+    return render(request, 'learning_logs/index.html')
