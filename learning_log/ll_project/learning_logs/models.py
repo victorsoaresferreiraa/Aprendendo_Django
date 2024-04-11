@@ -6,7 +6,7 @@ class Topic(models.Model):
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self) -> str:
+    def __str__(self):
         """Retorna uma apresentação de string do modelo"""
         return self.text
     
