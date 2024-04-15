@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+'''from django.shortcuts import render, redirect
 
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
@@ -8,7 +8,7 @@ def index(request):
     """The home page for Learning Log."""
     return render(request, 'learning_logs/index.html')
 
-def topics(request):
+def topics(request):cd
     """Show all topics."""
     topics = Topic.objects.order_by('date_added')
     context = {'topics': topics}
@@ -73,4 +73,4 @@ def edit_entry(request, entry_id):
             return redirect('learning_logs:topic', topic_id=topic.id)
 
     context = {'entry': entry, 'topic': topic, 'form': form}
-    return render(request, 'learning_logs/edit_entry.html', context)
+    return render(request, 'learning_logs/edit_entry.html', context)'''
